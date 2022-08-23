@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery cxScroll 间歇式无缝滚动</title>
+	<style>
+*{margin: 0;padding:0;}
+ul li{list-style: none;}
+body{background: purple;}
+.review-bd {width: 1086px;height: 200px;margin: 0 auto;position: relative;}
+.review-prev {left: -47px;width: 38px;height: 52px;background: url(img/i-prev.png) no-repeat top center;}
+.review-next {right: -40px;width: 38px;height: 52px;background: url(img/i-next.png) no-repeat top center;}
+.review-prev, .review-next {position: absolute;top: 100px;-webkit-transition: color .3s;-moz-transition: color .3s;-ms-transition: color .3s;-o-transition: color .3s;transition: color .3s;}
+.review-box {width: 1086px;padding-top: 20px;overflow: hidden;}
+.review-box ul {position: relative;height: 217px;overflow: hidden;width: 9999px;}
+.review-box li {float: left;width: 210px;border-right: 10px solid transparent;overflow: hidden;}
+.review-box .img {width: 200px;height: 200px;}
+.review-box .img img{width: 100%;height: 100%;}
+</style>
+</head>
+<body>
+	
+	<div class="review-bd" id="J-review">
+      <a href="javascript:;" class="review-prev prev j-prev"> </a>
+      <a href="javascript:;" class="review-next next j-next"> </a>
+      <div class="review-box box">
+          <ul class="list"> 
+              <li>
+                  <div class="img"><img src="https://img2.baidu.com/it/u=2088669013,456052454&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=669" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img0.baidu.com/it/u=2067636216,959840430&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img2.baidu.com/it/u=3690929351,1581170743&fm=253&fmt=auto&app=138&f=JPEG?w=346&h=499" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img0.baidu.com/it/u=3373649007,1518643845&fm=253&fmt=auto&app=138&f=JPEG?w=386&h=500" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img1.baidu.com/it/u=547023383,3479755264&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1165" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img1.baidu.com/it/u=2311756386,2655199661&fm=253&fmt=auto&app=138&f=JPEG?w=389&h=500" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img2.baidu.com/it/u=586043597,1620099328&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1200" alt=""></div>
+              </li>
+              <li>
+                  <div class="img"><img src="https://img1.baidu.com/it/u=1880962967,687638886&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750" alt=""></div>
+              </li>
+          </ul>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.cxscroll.min.js"></script>
+    <script>
+    	$("#J-review").cxScroll({direction:"right",step:1, auto: true});
+    </script>
+</body>
+</html>
